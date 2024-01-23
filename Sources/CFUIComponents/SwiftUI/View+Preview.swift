@@ -2,7 +2,7 @@
 //  Preview+Extensions.swift
 //  UICompanent
 //
-//  Created by Order Tiger on 8/3/21.
+//  Created by CuongFinal on 8/3/21.
 //  Copyright © All rights reserved.
 //
 #if canImport(SwiftUI) && os(iOS)
