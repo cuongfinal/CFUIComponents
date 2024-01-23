@@ -2,7 +2,7 @@
 //  SwiftUI+Extension.swift
 //  
 //
-//  Created by Order Tiger on 22/2/21.
+//  Created by CuongFinal on 22/2/21.
 //
 
 #if canImport(SwiftUI) && os(iOS)

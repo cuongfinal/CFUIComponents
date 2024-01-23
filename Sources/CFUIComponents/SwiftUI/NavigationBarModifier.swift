@@ -2,7 +2,7 @@
 //  NavigationBarModifier.swift
 //  UICompanent
 //
-//  Created by Order Tiger on 8/4/21.
+//  Created by CuongFinal on 8/4/21.
 //  Copyright © All rights reserved.
 //
 #if canImport(SwiftUI) && os(iOS)
@@ -16,9 +16,9 @@ public enum NavigationBarBG {
 }
 
 public struct NavigationBarModifier {
-    public static func setNavigationBarStyle(backgroundColor: UIColor? = Color.appColor(\.bg).uiColor,
-                                             titleColor: UIColor? = Color.appColor(\.navText).uiColor,
-                                             tintColor: UIColor? = Color.appColor(\.navText).uiColor,
+    public static func setNavigationBarStyle(backgroundColor: UIColor? = Color.appColor(.bg).uiColor,
+                                             titleColor: UIColor? = Color.appColor(.navText).uiColor,
+                                             tintColor: UIColor? = Color.appColor(.navText).uiColor,
                                              bgType: NavigationBarBG = .default) {
         let appearance = UINavigationBarAppearance()
         switch bgType {
