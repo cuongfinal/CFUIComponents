@@ -26,7 +26,6 @@ let package = Package(
         .target(
             name: "CFUIComponents",
             dependencies: ["Reachability",
-                           .product(name: "RealmSwift", package: "Realm"),
                            .product(name: "FirebaseAnalytics", package: "Firebase"),
                            .product(name: "FirebaseCrashlytics", package: "Firebase"),
                            .product(name: "FirebaseRemoteConfig", package: "Firebase")]),
