@@ -28,3 +28,49 @@ public struct CFButton<Label>: View where Label: View {
         }
     }
 }
+
+
+public extension View {
+    func setCornerRadius(value: CGFloat? = nil) -> some View {
+        self.cornerRadius(value ?? 12)
+    }
+    
+    func defaultButton() -> some View {
+        self.backgroundColor(.appColor(.bgButton)).foregroundColor(.appColor(.btText))
+    }
+    
+    func grayButton() -> some View {
+        self.backgroundColor(.appColor(.bgSecdButton)).foregroundColor(.appColor(.btSecdText))
+    }
+}
+
+public struct CFButtonIcon: View {
+    private let icon: String
+    private let action: () -> Void
+    private let iconSize: CGSize
+    private let backgroundColor: Color
+    
+    public init(icon: String,
+                iconSize: CGSize = .init(width: 28.36, height: 28.36),
+                backgroundColor: Color = .green,
+                action: @escaping () -> Void) {
+        self.icon = icon
+        self.action = action
+        self.iconSize = iconSize
+        self.backgroundColor = backgroundColor
+    }
+    
+    public var body: some View {
+        Button(action: action, label: {
+            ZStack {
+                Image(icon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: iconSize.width, height: iconSize.height, alignment: .center)
+            }
+            .infinityFrame()
+            .backgroundColor(backgroundColor)
+        })
+            .cornerRadius(15)
+    }
+}

@@ -95,4 +95,5 @@ public extension Text {
         multilineTextAlignment(alignment)
     }
 }
+
 #endif

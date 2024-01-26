@@ -98,4 +98,12 @@ public struct AnimationCompletionObserverModifier<Value>: AnimatableModifier whe
     }
 }
 
+
+public func getImageNamed(_ imageName: String) -> Image? {
+    if UIImage(named: imageName) == nil {
+        return nil // Or whatever you want to be your default image
+    }
+    return Image(imageName)
+}
+
 #endif
